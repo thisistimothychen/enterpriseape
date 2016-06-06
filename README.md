@@ -13,11 +13,16 @@ This is a comprehensive Ruby on Rails development course created for individuals
 ```bash
 git status
 git add .
-git commit -m comments here'
+git commit -m 'comments here'
 git push
 ```
 
 #####Pushing to Heroku
 ```bash
 git push heroku
+```
+
+#####Creating a new branch (Github)
+```bash
+git checkout -b branchname
 ```
