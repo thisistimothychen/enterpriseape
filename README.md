@@ -26,3 +26,13 @@ git push heroku
 ```bash
 git checkout -b branchname
 ```
+
+#####Switching to a different branch (Github)
+```bash
+git checkout branchname
+```
+
+#####Merging testingbranch to current branch (Github)
+```bash
+git merge testingbranch
+```
