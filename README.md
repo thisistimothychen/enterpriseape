@@ -10,10 +10,10 @@ This is a comprehensive Ruby on Rails development course created for individuals
 ### Personal Notes
 
 Pushing to Github
-'git status
+`git status
 git add .
-git commit -m ''comments here''
-git push'
+git commit -m comments here'
+git push`
 
 Pushing to Heroku
-'git push heroku'
+`git push heroku`
