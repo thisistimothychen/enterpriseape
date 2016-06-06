@@ -19,7 +19,7 @@ git push
 
 #####Pushing to Heroku
 ```bash
-git push heroku
+git push heroku master
 ```
 
 #####Creating a new branch (Github)
