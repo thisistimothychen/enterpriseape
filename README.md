@@ -36,3 +36,8 @@ git checkout branchname
 ```bash
 git merge testingbranch
 ```
+
+#####Revert to previous version (before push) (Github)
+```bash
+git checkout -- full_file_path_here/file
+```
