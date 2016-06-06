@@ -7,9 +7,9 @@ Tutorial for this code can be found at [this playlist](https://www.youtube.com/p
 
 This is a comprehensive Ruby on Rails development course created for individuals who want to build powerful web applications. I have been developing applications for the past decade and I created this course to help developers of all skill levels, from beginners to advanced software engineers, learn how to build robust Rails apps.
 
-### Personal Notes
+## Personal Notes
 
-Pushing to Github
+#####Pushing to Github
 ```bash
 git status
 git add .
@@ -17,7 +17,7 @@ git commit -m comments here'
 git push
 ```
 
-Pushing to Heroku
+#####Pushing to Heroku
 ```bash
 git push heroku
 ```
