@@ -1,4 +1,4 @@
-Enterprise Ape -- Ruby on Rails Practice
+Enterprise Ape: Ruby on Rails Practice
 ========================================
 
 ### Introduction to Ruby on Rails Development by edutechional
