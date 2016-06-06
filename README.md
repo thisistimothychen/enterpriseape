@@ -13,7 +13,9 @@ Pushing to Github
 ````git status
 git add .
 git commit -m comments here'
-git push````
+git push
+````
 
 Pushing to Heroku
-````git push heroku````
+````git push heroku
+````
