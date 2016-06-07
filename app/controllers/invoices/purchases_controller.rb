@@ -3,8 +3,7 @@ class Invoices::PurchasesController < ApplicationController
   # GET /purchases
   # GET /purchases.json
   def index
-    @invoice = Invoice.find(params[:invoice_id])
-    @purchase = Purchase.new
+    @purchases = Purchase.all
   end
 
   # GET /purchases/1
@@ -14,6 +13,7 @@ class Invoices::PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
+    @invoice = Invoice.find(params[:invoice_id])
     @purchase = Purchase.new
   end
 
