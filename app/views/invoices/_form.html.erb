@@ -3,15 +3,15 @@
     <% if @invoice.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
-
+  
         <ul>
-        <% @invoice.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <% @invoice.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
         </ul>
       </div>
     <% end %>
-
+  
     <div class="control-group">
       <%= f.label :date, class: 'control-label' %><br>
       <div class="controls">
@@ -39,7 +39,7 @@
     <div class="control-group">
       <%= f.label "Status", class: 'control-label' %>
       <div class="controls">
-        <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), {include_blank: true} ) %>
+        <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), { include_blank: true }) %>
       </div>
     </div>
     <div class="control-group">

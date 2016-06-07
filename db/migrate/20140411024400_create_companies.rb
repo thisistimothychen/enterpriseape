@@ -6,7 +6,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :status
       t.integer :terms
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

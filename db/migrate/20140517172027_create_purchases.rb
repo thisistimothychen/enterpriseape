@@ -4,9 +4,9 @@ class CreatePurchases < ActiveRecord::Migration
       t.string :name
       t.string :category
       t.integer :quantity
-      t.references :invoice, index: true, foreign_key: true
+      t.references :invoice, index: true
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end

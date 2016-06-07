@@ -5,7 +5,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :phone
       t.string :job_type
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
