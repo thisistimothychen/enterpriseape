@@ -58,4 +58,3 @@ rails generate scaffold ClassName variable:datatype --no-stylesheets
 rake db:migrate
 rake routes
 ```
-
