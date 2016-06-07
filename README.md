@@ -45,6 +45,12 @@ git checkout -- full_file_path_here/file
 
 
 ###Rails
+#####Enter sandbox mode
+(Automatically rollbacks any changes to prior to entering sandbox)
+```bash
+rails console --sandbox
+```
+
 #####Create new scaffold
 (Scaffold: full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above)
 ```bash
@@ -52,3 +58,4 @@ rails generate scaffold ClassName variable:datatype --no-stylesheets
 rake db:migrate
 rake routes
 ```
+
