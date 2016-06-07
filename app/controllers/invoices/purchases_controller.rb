@@ -56,10 +56,16 @@ class Invoices::PurchasesController < ApplicationController
   # DELETE /purchases/1
   # DELETE /purchases/1.json
   def destroy
-    @purchase.destroy
-    respond_to do |format|
-      format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
-      format.json { head :no_content }
+    @invoice = Invoice.find(params[:invoice_id])
+    @purchase = Purchase.find(params[:id])
+    title = @purchase.name
+
+    if @purchase.destroy #if purchase works
+      flash[:notice] = "#{title} was deleted successfully."
+      redirect_to @invoice
+    else
+      flash[:error] = "There was an error deleting the purchase."
+      render :show
     end
   end
 
@@ -71,6 +77,6 @@ class Invoices::PurchasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_params
-      params.require(:purchase).permit(:name, :category, :quantity, :invoice_id)
+      params.require(:purchase).permit(:name, :category, :quantity, :invoice_id, :price)
     end
 end
