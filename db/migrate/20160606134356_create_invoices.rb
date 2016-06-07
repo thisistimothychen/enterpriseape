@@ -6,7 +6,7 @@ class CreateInvoices < ActiveRecord::Migration
       t.decimal :tax
       t.string :salesperson
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

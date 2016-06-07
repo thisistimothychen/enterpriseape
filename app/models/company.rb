@@ -4,7 +4,7 @@ class Company < ActiveRecord::Base
       Company.create! row.to_hash
     end
   end
-  
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names
@@ -13,6 +13,4 @@ class Company < ActiveRecord::Base
       end
     end
   end
-  
-  
 end

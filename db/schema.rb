@@ -11,59 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520013338) do
+ActiveRecord::Schema.define(version: 20160607145455) do
 
-  create_table "companies", force: true do |t|
+  create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "manager"
     t.string   "status"
     t.integer  "terms"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: true do |t|
+  create_table "employees", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
     t.string   "job_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "invoices", force: true do |t|
+  create_table "invoices", force: :cascade do |t|
     t.datetime "date"
     t.string   "company"
     t.decimal  "tax"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "status_type"
     t.integer  "employee_id"
   end
 
-  create_table "items", force: true do |t|
-    t.string   "name"
-    t.integer  "quantity"
-    t.string   "category"
-    t.integer  "invoice_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "items", ["invoice_id"], name: "index_items_on_invoice_id"
-
-  create_table "purchases", force: true do |t|
+  create_table "purchases", force: :cascade do |t|
     t.string   "name"
     t.string   "category"
     t.integer  "quantity"
     t.integer  "invoice_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "purchases", ["invoice_id"], name: "index_purchases_on_invoice_id"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -78,8 +66,8 @@ ActiveRecord::Schema.define(version: 20140520013338) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
